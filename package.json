@@ -1,0 +1,32 @@
+{
+  "name": "test-ci",
+  "version": "1.0.0",
+  "description": "test CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unker/test-ci.git"
+  },
+  "author": "Unker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unker/test-ci/issues"
+  },
+  "homepage": "https://github.com/Unker/test-ci#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-jest": "^29.5.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "core-js": "^3.30.2"
+  }
+}

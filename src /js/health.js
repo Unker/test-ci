@@ -9,3 +9,7 @@ export default function checkHealth(character) {
 
   return result;
 }
+
+export function sortByHealt(character) {
+  return character.sort((a, b) => (a.health < b.health ? 1 : -1));
+}

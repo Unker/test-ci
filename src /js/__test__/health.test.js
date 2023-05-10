@@ -1,4 +1,4 @@
-import checkHealth from '../health';
+import checkHealth, { sortByHealt } from '../health';
 
 test.each([
   [{ name: 'Маг', health: 90 }, 'wounded'],
@@ -13,3 +13,21 @@ test.each([
     expect(result).toBe(expected);
   },
 );
+
+test('characters sort by health', () => {
+  const characters = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+  ];
+
+  const expected = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
+
+  const result = sortByHealt(characters);
+
+  expect(result).toStrictEqual(expected);
+});

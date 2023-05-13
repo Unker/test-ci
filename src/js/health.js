@@ -1,9 +1,9 @@
-export default function checkHealth(character) {
+export default function checkHealth({health}) {
   let result = 'critical';
 
-  if (character.health > 90) {
+  if (health > 90) {
     result = 'healthy';
-  } else if (character.health >= 15) {
+  } else if (health >= 15) {
     result = 'wounded';
   }
 
@@ -11,5 +11,5 @@ export default function checkHealth(character) {
 }
 
 export function sortByHealt(character) {
-  return character.sort((a, b) => (a.health < b.health ? 1 : -1));
+  return [...character].sort((a, b) => b.health - a.health);
 }

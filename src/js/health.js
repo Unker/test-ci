@@ -1,4 +1,4 @@
-export default function checkHealth({health}) {
+export default function checkHealth({ health }) {
   let result = 'critical';
 
   if (health > 90) {
